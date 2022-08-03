@@ -6,6 +6,8 @@ Ultimate AWS Certified Developer Associate 2022 - NEW!
 
 * Preparation to Amazon Cloud Practioner Certification
 
+The lambda-xray.yaml is a CloudFormation template that declares a lambda function.
+
 ============================================================
 
 
