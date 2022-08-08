@@ -1,0 +1,20 @@
+# !/bin/bash
+
+# Demo Projection Expression
+aws dynamodb scan --table-name UsersPosts --projection-expression "user_id, content"
+
+# Demo Filter Expression
+aws dynamodb scan --table-name UsersPosts --filter-expression "user_id = :u" --expression-attribute-values '{":u": {"S":"john123"}}'
+
+# Page Size demo: will do 1 API call if you have 3 items
+aws dynamodb scan --table-name UsersPosts
+
+# Will do 3 API calls if you have 3 items
+aws dynamodb scan --table-name UsersPosts --page-size 1
+
+# Max Items demo'
+aws dynamodb scan --table-name UsersPosts --max-items 1
+
+# Fetch the next items
+aws dynamodb scan --table-name UsersPosts --max-items 1 --starting-token eyJFeGNsdXNpdmVTdGFydEtleSI6IG51bGwsICJib3RvX3RydW5jYXRlX2Ftb3VudCI6IDF9
+
