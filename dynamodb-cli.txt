@@ -12,7 +12,7 @@ aws dynamodb scan --table-name UsersPosts
 # Will do 3 API calls if you have 3 items
 aws dynamodb scan --table-name UsersPosts --page-size 1
 
-# Max Items demo'
+# Max Items demo
 aws dynamodb scan --table-name UsersPosts --max-items 1
 
 # Fetch the next items
